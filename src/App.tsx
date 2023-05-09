@@ -1,11 +1,11 @@
 import "./App.css";
-import LineChart from "./components/LineChart/LineChart";
+import ColorsChart from "./components/ColorsChart/ColorsChart";
+// import LineChart from "./components/LineChart/LineChart";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <LineChart
+      {/* <LineChart
           top={10}
           right={50}
           bottom={50}
@@ -13,8 +13,8 @@ function App() {
           width={800}
           height={400}
           fill="yellow"
-        />
-      </header>
+        /> */}
+      <ColorsChart />
     </div>
   );
 }
