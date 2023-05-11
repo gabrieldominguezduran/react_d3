@@ -10,16 +10,19 @@ const ColorsChart = () => {
   useEffect(() => {
     d3.csv(url).then((data) => {
       setMessage(`
-      Data: ${Math.round(d3.csvFormat(data).length / 1024)} KB, ${
-        data.length
-      } Rows, ${data.columns.length} Columns`);
+      Data: ${Math.round(d3.csvFormat(data).length / 1024)} KB
+       ${data.length} Rows 
+       ${data.columns.length} Columns`);
       return setData(data);
     });
-    console.log("DATA: ", data);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  return <div className="ColorsChart">{!data ? "Loading..." : message}</div>;
+  console.log("DATA: ", data);
+  return (
+    <pre className="ColorsChart">
+      {Object.keys(data).length === 0 ? "Loading..." : message}
+    </pre>
+  );
 };
 
 export default ColorsChart;
