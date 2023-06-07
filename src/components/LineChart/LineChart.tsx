@@ -22,7 +22,7 @@ const LineChart = (props: LineChartProps) => {
       .append("g")
       .attr("transform", `translate(${props.left},${props.top})`);
 
-    d3.dsv(",", "/data/line2.csv", (d) => {
+    d3.csv("/data/line2.csv", (d) => {
       const date = d.Date ? d3.timeParse("%Y-%m-%d")(d.Date) : null;
 
       return {
@@ -81,7 +81,7 @@ const LineChart = (props: LineChartProps) => {
     });
   };
 
-  return <div className="lineChart" />;
+  return <div className="lineChart" data-testid="lineChart" />;
 };
 
 interface LineChartProps {
