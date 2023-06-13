@@ -2,6 +2,7 @@ import "./App.css";
 import AreaChart from "./components/AreaChart/AreaChart";
 import BarChart from "./components/BarChart/BarChart";
 import ColorsChart from "./components/ColorsChart/ColorsChart";
+import DonutChart from "./components/DonutChart/DonutChart";
 import LineChart from "./components/LineChart/LineChart";
 import PieChart from "./components/PieChart/PieChart";
 import StripesChart from "./components/StripesChart/StripesChart";
@@ -45,6 +46,14 @@ function App() {
         right={10}
         bottom={10}
         left={10}
+      />
+      <DonutChart
+        data={[
+          { name: "Yes", value: 80 },
+          { name: "No", value: 20 },
+        ]}
+        width={50}
+        height={50}
       />
     </div>
   );
