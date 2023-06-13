@@ -5,6 +5,7 @@ import ColorsChart from "./components/ColorsChart/ColorsChart";
 import DonutChart from "./components/DonutChart/DonutChart";
 import LineChart from "./components/LineChart/LineChart";
 import PieChart from "./components/PieChart/PieChart";
+import ScatterChart from "./components/ScatterChart/ScatterChart";
 import StripesChart from "./components/StripesChart/StripesChart";
 
 function App() {
@@ -54,6 +55,15 @@ function App() {
         ]}
         width={50}
         height={50}
+      />
+      <ScatterChart
+        width={800}
+        height={400}
+        top={10}
+        right={50}
+        bottom={50}
+        left={50}
+        fill="#33FEFF"
       />
     </div>
   );
