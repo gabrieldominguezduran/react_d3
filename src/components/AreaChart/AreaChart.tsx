@@ -80,7 +80,7 @@ const AreaChart = (props: AreaChartProps) => {
     });
   };
 
-  return <div className="areaChart" data-testid="lineChart" />;
+  return <div className="areaChart" data-testid="areaChart" />;
 };
 
 interface AreaChartProps {
